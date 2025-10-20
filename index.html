@@ -1,27 +1,281 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mimari Restorasyon Programı | Üniversitemiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/6366f1/ffffff?text=Tarihi+Dokuda+Modern+Eğitim');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 mb-2 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto;
+        }
+    </style>
 </head>
-<body>
-    <div class="input-container">
-        <div class="input-group">
-            <input type="email" class="email-input" placeholder=" " required>
-            <label class="input-label">Email</label>
-        </div>
-        <div class="input-group">
-            <input type="text" class="name-input" placeholder=" " required>
-            <label class="input-label">Full Name</label>
-        </div>
-        <div class="input-group">
-            <textarea class="comment-input" placeholder=" " required></textarea>
-            <label class="input-label">Comment</label>
 
-            <button class="send-button">SEND</button>
+<body class="bg-gray-50">
+
+    <!-- Header & Navigasyon -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-indigo-600">
+                    <a href="#">MR</a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#hakkimizda" class="text-gray-600 hover:text-indigo-600 font-medium">Program Hakkında</a>
+                    <a href="#dersler" class="text-gray-600 hover:text-indigo-600 font-medium">Ders Programı</a>
+                    <a href="#kadro" class="text-gray-600 hover:text-indigo-600 font-medium">Akademik Kadro</a>
+                    <a href="#projeler" class="text-gray-600 hover:text-indigo-600 font-medium">Projeler</a>
+                    <a href="#basvuru" class="text-gray-600 hover:text-indigo-600 font-medium">Başvuru</a>
+                    <a href="#iletisim" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition">Bize Ulaşın</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
+                </button>
+            </div>
         </div>
-    </div>
+        <!-- Mobil Menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+            <a href="#hakkimizda" class="block py-2 text-gray-600 hover:text-indigo-600">Program Hakkında</a>
+            <a href="#dersler" class="block py-2 text-gray-600 hover:text-indigo-600">Ders Programı</a>
+            <a href="#kadro" class="block py-2 text-gray-600 hover:text-indigo-600">Akademik Kadro</a>
+            <a href="#projeler" class="block py-2 text-gray-600 hover:text-indigo-600">Projeler</a>
+            <a href="#basvuru" class="block py-2 text-gray-600 hover:text-indigo-600">Başvuru</a>
+            <a href="#iletisim" class="block py-2 mt-2 bg-indigo-600 text-white px-4 rounded-full text-center hover:bg-indigo-700 transition">Bize Ulaşın</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Bölümü -->
+        <section class="hero-bg text-white h-[600px] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Mimari Restorasyon Programı</h1>
+                <p class="text-xl md:text-2xl font-light mb-8 max-w-3xl mx-auto">Geçmişin izlerini koruyarak geleceğin yapılarını şekillendirin.</p>
+                <a href="#hakkimizda" class="bg-white text-indigo-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition-transform transform hover:scale-105">Programı Keşfet</a>
+            </div>
+        </section>
+
+        <!-- Program Hakkında Bölümü -->
+        <section id="hakkimizda" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Program Hakkında</h2>
+                <p class="section-subtitle">Programımız, kültürel mirası koruma bilinciyle donatılmış, teorik bilgiyi pratik becerilerle birleştiren uzman restorasyon teknikerleri yetiştirmeyi amaçlamaktadır.</p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-indigo-100 p-4 rounded-full">
+                                <i data-lucide="book-open-check" class="w-8 h-8 text-indigo-600"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Kapsamlı Müfredat</h3>
+                        <p class="text-gray-600">Sanat tarihinden modern koruma tekniklerine, geleneksel malzeme bilgisinden dijital belgelemeye uzanan geniş bir yelpazede eğitim.</p>
+                    </div>
+                    <div class="text-center p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-indigo-100 p-4 rounded-full">
+                                <i data-lucide="hammer" class="w-8 h-8 text-indigo-600"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Uygulamalı Eğitim</h3>
+                        <p class="text-gray-600">Modern atölyelerimizde ve tarihi şantiyelerde yapılan saha çalışmaları ile teorik bilgiyi pratiğe dökme imkanı.</p>
+                    </div>
+                    <div class="text-center p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition">
+                        <div class="flex justify-center mb-4">
+                             <div class="bg-indigo-100 p-4 rounded-full">
+                                <i data-lucide="graduation-cap" class="w-8 h-8 text-indigo-600"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Kariyer Fırsatları</h3>
+                        <p class="text-gray-600">Mezunlarımızı, müzelerden özel restorasyon firmalarına, bakanlıklardan yerel yönetimlere kadar geniş bir iş alanında kariyer bekliyor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ders Programı Bölümü -->
+        <section id="dersler" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Ders Programı</h2>
+                <p class="section-subtitle">İki yıllık eğitim süresince öğrencilerimizin alacağı temel ve seçmeli derslerden bazıları.</p>
+                <div class="max-w-4xl mx-auto mt-10">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-indigo-700 mb-4 border-b-2 border-indigo-200 pb-2">1. Yıl Dersleri</h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Sanat ve Mimarlık Tarihi</span></li>
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Teknik Resim ve Perspektif</span></li>
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Geleneksel Yapı Malzemeleri</span></li>
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Rölöve I (Ölçümleme Teknikleri)</span></li>
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Bilgisayar Destekli Çizim (CAD)</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-indigo-700 mb-4 border-b-2 border-indigo-200 pb-2">2. Yıl Dersleri</h3>
+                             <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Koruma ve Restorasyon İlkeleri</span></li>
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Restitüsyon ve Restorasyon Projesi</span></li>
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Ahşap ve Kagir Yapı Onarım Teknikleri</span></li>
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Şantiye Yönetimi ve Metraj</span></li>
+                                <li class="flex items-start"><i data-lucide="chevron-right" class="w-5 h-5 text-indigo-500 mt-1 mr-2 flex-shrink-0"></i> <span>Zorunlu Staj ve Bitirme Projesi</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Akademik Kadro Bölümü -->
+        <section id="kadro" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Akademik Kadro</h2>
+                <p class="section-subtitle">Alanında uzman, deneyimli ve dinamik akademik kadromuzla tanışın.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <!-- Örnek Öğretim Üyesi Kartı 1 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center group">
+                        <img src="https://placehold.co/400x400/a5b4fc/1e293b?text=Prof.+Dr.+Ayşe+Yılmaz" alt="Prof. Dr. Ayşe Yılmaz" class="w-full h-64 object-cover group-hover:opacity-90 transition">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Prof. Dr. Ayşe Yılmaz</h3>
+                            <p class="text-indigo-600">Bölüm Başkanı</p>
+                            <p class="text-gray-600 mt-2 text-sm">Bizans Mimarisi ve Koruma Teknikleri Uzmanı.</p>
+                        </div>
+                    </div>
+                    <!-- Örnek Öğretim Üyesi Kartı 2 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center group">
+                        <img src="https://placehold.co/400x400/a5b4fc/1e293b?text=Dr.+Öğr.+Üyesi+Mehmet+Kaya" alt="Dr. Öğr. Üyesi Mehmet Kaya" class="w-full h-64 object-cover group-hover:opacity-90 transition">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Dr. Öğr. Üyesi Mehmet Kaya</h3>
+                            <p class="text-indigo-600">Öğretim Üyesi</p>
+                            <p class="text-gray-600 mt-2 text-sm">Osmanlı Sivil Mimarisi ve Geleneksel Malzeme Uzmanı.</p>
+                        </div>
+                    </div>
+                    <!-- Örnek Öğretim Üyesi Kartı 3 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md text-center group">
+                        <img src="https://placehold.co/400x400/a5b4fc/1e293b?text=Öğr.+Gör.+Elif+Demir" alt="Öğr. Gör. Elif Demir" class="w-full h-64 object-cover group-hover:opacity-90 transition">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Öğr. Gör. Elif Demir</h3>
+                            <p class="text-indigo-600">Öğretim Görevlisi</p>
+                            <p class="text-gray-600 mt-2 text-sm">Dijital Belgeleme ve CAD Uygulamaları Uzmanı.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projeler Bölümü -->
+        <section id="projeler" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Öğrenci Projeleri ve Atölye Çalışmaları</h2>
+                <p class="section-subtitle">Öğrencilerimizin eğitimleri boyunca hayata geçirdikleri projelerden ve katıldıkları atölyelerden bazı örnekler.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg hover:scale-105 transition-transform" src="https://placehold.co/600x800/e0e7ff/312e81?text=Rölöve+Çizimi" alt="Rölöve Çizimi"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg hover:scale-105 transition-transform" src="https://placehold.co/600x400/e0e7ff/312e81?text=Saha+Çalışması" alt="Saha Çalışması"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg hover:scale-105 transition-transform" src="https://placehold.co/600x400/c7d2fe/312e81?text=Ahşap+Atölyesi" alt="Ahşap Atölyesi"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg hover:scale-105 transition-transform" src="https://placehold.co/600x800/c7d2fe/312e81?text=Restorasyon+Projesi" alt="Restorasyon Projesi"></div>
+                    </div>
+                     <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg hover:scale-105 transition-transform" src="https://placehold.co/600x800/a5b4fc/1e293b?text=Maket+Yapımı" alt="Maket Yapımı"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg hover:scale-105 transition-transform" src="https://placehold.co/600x400/a5b4fc/1e293b?text=Taş+İşçiliği" alt="Taş İşçiliği"></div>
+                    </div>
+                     <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg hover:scale-105 transition-transform" src="https://placehold.co/600x400/818cf8/1e293b?text=Detay+Çizimi" alt="Detay Çizimi"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg hover:scale-105 transition-transform" src="https://placehold.co/600x800/818cf8/1e293b?text=Sergi" alt="Sergi"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Başvuru Bölümü -->
+        <section id="basvuru" class="py-20 bg-indigo-700 text-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-4">Aramıza Katılın!</h2>
+                <p class="text-lg text-indigo-200 mb-8 max-w-2xl mx-auto">Tarihe dokunmak ve kültürel mirası geleceğe taşımak için ilk adımı atın. Başvuru süreci ve koşulları hakkında detaylı bilgi için üniversitemizin aday öğrenci sayfasını ziyaret edebilirsiniz.</p>
+                <a href="#" class="bg-white text-indigo-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition-transform transform hover:scale-105">Detaylı Bilgi ve Başvuru</a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="iletisim" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Mimari Restorasyon Programı</h3>
+                    <p class="text-gray-400">Üniversitemiz, [Fakülte Adı], [Kampüs Adı]</p>
+                    <p class="text-gray-400">[Adres Bilgisi], [İlçe/İl]</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">İletişim</h3>
+                    <p class="text-gray-400">Telefon: <a href="tel:+902120000000" class="hover:text-indigo-400">+90 (212) 000 00 00</a></p>
+                    <p class="text-gray-400">E-posta: <a href="mailto:mimari.restorasyon@universite.edu.tr" class="hover:text-indigo-400">mimari.restorasyon@universite.edu.tr</a></p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Sosyal Medya</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>&copy; <span id="year"></span> Üniversitemiz. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lucide ikonlarını yükle
+        lucide.createIcons();
+
+        // Mobil menü toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navigasyon linklerine tıklandığında mobil menüyü kapat
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Yılı otomatik olarak ayarla
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll yapıldığında header'ı küçült
+        const header = document.getElementById('header');
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                header.classList.add("py-2");
+                header.classList.remove("py-4");
+            } else {
+                header.classList.add("py-4");
+                header.classList.remove("py-2");
+            }
+        };
+    </script>
 </body>
+
 </html>
+
